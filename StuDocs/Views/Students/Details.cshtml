@@ -1,0 +1,97 @@
+﻿@model StuDocs.Models.Student
+
+@{
+    ViewBag.Title = "Преглед - " + Model.name + " " + Model.surname;
+}
+
+<h2>Преглед на внесените податоци</h2>
+
+<div>
+    <h4>Студент @Html.DisplayFor(model => model.name) @Html.DisplayFor(model => model.surname)<br />@Html.DisplayFor(model => model.indeks.faculty)</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.surname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.surname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.parentName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.parentName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nationality)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nationality)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.birthAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.birthAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.homeAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.homeAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.birthDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.birthDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.phone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.phone)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    <a class="btn btn-default" href=@Url.Action("Create", "PrijavaZaIspits", null)>Пополни пријава за испит &raquo;</a>
+</p>
+<p>
+    @{
+    TempData["Student"]=Model;
+    }
+   <!-- @Html.ActionLink("Измени", "Edit") , new { id = Model.embg }-->
+    @Html.ActionLink("Измени", "Edit") <!-- new { s = Model }--> |
+    @Html.ActionLink("Откажи", "Index", "Home", null, null)
+</p>

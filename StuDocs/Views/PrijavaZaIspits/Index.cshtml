@@ -1,0 +1,99 @@
+﻿@model IEnumerable<StuDocs.Models.PrijavaZaIspit>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Попис</h2>
+
+<p>
+    @Html.ActionLink("Нов студент", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.faculty)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ciklus)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.programa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.modul)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ispitenRok)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.predmet)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.kod)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.semestar)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.polaganje)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.prof)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.assistant)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.adminTaksa)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.faculty)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ciklus)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.programa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.modul)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ispitenRok)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.predmet)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.kod)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.semestar)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.polaganje)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.prof)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.assistant)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.adminTaksa)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.iknowBroj }) |
+            @Html.ActionLink("Details", "Details", new { id=item.iknowBroj }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.iknowBroj })
+        </td>
+    </tr>
+}
+
+</table>

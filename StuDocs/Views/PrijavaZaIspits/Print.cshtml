@@ -1,0 +1,96 @@
+﻿@{
+    Layout = null;
+}
+
+@model StuDocs.Models.PrijavaStudent
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Пријава за испит</title>
+
+    @Styles.Render("~/Content/css")
+</head>
+<body>
+    <page size="A4">
+        <p align="right" style="font-size: 12pt">
+            @Html.DisplayFor(model => model.s.indeks.number) / @Html.DisplayFor(model => model.s.indeks.year)
+        </p>
+
+        <p align="center" style="font-size: 12pt">
+            @Html.DisplayFor(model => model.p.faculty)
+        </p>
+
+        <p align="center" style="font-size: 12pt">
+            @Html.DisplayFor(model => model.p.ciklus)
+        </p>
+
+        <p align="center" style="font-size: 12pt">
+            @Html.DisplayFor(model => model.p.programa)
+        </p>
+
+        <p align="center" style="font-size: 12pt">
+            @Html.DisplayFor(model => model.p.modul)
+        </p>
+
+        <p align="center" style="font-size: 12pt">
+            @Html.DisplayFor(model => model.p.ispitenRok)
+        </p>
+        <br /><br /><br />
+        <br /><br /><br />
+        <p align="right" style="font-size: 12pt">
+            @Html.DisplayFor(model => model.s.name) @Html.DisplayFor(model => model.s.surname)
+        </p>
+
+        <p align="center" style="font-size: 12pt">
+            @Html.DisplayFor(model => model.p.predmet)
+        </p>
+
+        <p align="right" style="font-size: 12pt">
+            @Html.DisplayFor(model => model.p.kod)
+        </p>
+
+        <p align="center" style="font-size: 12pt">
+            @Html.DisplayFor(model => model.p.semestar)
+        </p>
+
+        <p align="right" style="font-size: 12pt">
+            @Html.DisplayFor(model => model.p.krediti)
+        </p>
+
+        <p align="center" style="font-size: 12pt">
+            @Html.DisplayFor(model => model.p.polaganje)
+        </p>
+
+        <p align="right" style="font-size: 12pt">
+            @Html.DisplayFor(model => model.p.prof)
+        </p>
+
+        <p align="right" style="font-size: 12pt">
+            @Html.DisplayFor(model => model.p.assistant)
+        </p>
+
+        <p align="left" style="font-size: 12pt">
+            &nbsp;&nbsp;&nbsp;&nbsp; @Html.DisplayFor(model => model.p.adminTaksa)
+        </p>
+    </page>
+
+    <!-- zadna strana-->
+    <page size="A4">
+        <p align="right" style="font-size: 12pt">
+            <br /><br /><br /><br />
+            @Model.s.name @Model.s.surname
+        </p>
+        <p align="right" style="font-size: 12pt">
+            <br />
+            @Model.s.name @Model.s.surname
+        </p>
+        <p>
+
+            <br />
+        </p>
+
+    </page>
+</body>
+</html>
