@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang=mk>
+<head>
+  <!-- Meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Пополнување на пријава за испит</title>
+  <!-- Styles -->
+  <!-- Bootstrap v4 -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/custom/index.css">
+</head>
+
+<body>
+  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <![endif]-->
+
+<!-- Navbar -->
+  <div class="navbar navbar-static-top navbar-dark bg-inverse">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-toggler="collapse" data-target="#navbar-header"> &#9776 </button>
+      <img src="img/i-need-more-space.jpg" class="img" />
+    </div>
+  </div>
+
+  <section>
+    <div class="container">
+      <form>
+        <div class="form-group">
+          <label for="brojNaPrijava">IKnow број на пријавата</label>
+          <input type="email" name="brojNaPrijava" class="form-control" id="brojNaPrijava" aria-describedby="brojNaPrijavaHelp" placeholder="пр. 000001">
+          <small id="brojNaPrijavaHelp" class="form-text text-muted">Бројот на пријавата можете да го добиете од IKnow системот откако ќе го пријавите предметот во сесијата за која го пријавувате.</small>
+        </div>
+
+        <fieldset class="form-group">
+        <legend>Податоци за студентот</legend>
+
+        <div class="row">
+          <div class="col-xs-9 col-md-9">
+            <div class="form-group">
+              <label for="imeIPrezime">Име и презиме</label>
+              <input type="text" name="imeIPrezime" class="form-control" id="imeIPrezime" aria-describedby="imeIPrezimeHelp" placeholder="пр. Итар Пејо">
+              <small id="imeIPrezimeHelp" class="form-text text-muted">Твоето име и презиме</small>
+            </div>
+          </div>
+
+          <div class="col-xs-3 col-md-3">
+            <div class="form-group">
+              <label for="brojNaIndeks">Број на индекс</label>
+              <input type="email" name="brojNaIndeks" class="form-control" id="brojNaIndeks" aria-describedby="brojNaIndeksHelp" placeholder="пр. 174/2012">
+              <small id="brojNaIndeksHelp" class="form-text text-muted">Де бе, број на индекс - го знаеш, нели?</small>
+            </div>
+          </div>
+        </div>
+
+          <div class="row">
+            <div class="col-xs-8 col-md-8">
+              <div class="form-group">
+                <label for="fakultet">Факултет</label>
+                <select class="form-control" name="fakultet" id="fakultet">
+                  <option>Факултет за електротехника и информациски технологии</option>
+                  <option>Архитектонски факултет</option>
+                  <option>Градежен факултет</option>
+                  <option>Економски факултет</option>
+                  <option>Машински факултет</option>
+                  <option>Медицински факултет</option>
+                  <option>Педагошки факултет „Св. Климент Охридски“</option>
+                  <option>Правен факултет „Јустинијан Први“</option>
+                  <option>Природно-математички факултет</option>
+                  <option>Стоматолошки факултет</option>
+                  <option>Технолошко-металуршки факултет</option>
+                  <option>Факултет за ветеринарна медицина</option>
+                  <option>Факултет за дизајн и технологии на мебел и ентериер</option>
+                  <option>Факултет за драмски уметности</option>
+                  <option>Факултет за земјоделски науки и храна</option>
+                  <option>Факултет за информатички науки и компјутерско инженерство</option>
+                  <option>Факултет за ликовни уметности</option>
+                  <option>Факултет за музичка уметност</option>
+                  <option>Факултет за физичко образование, спорт и здравје</option>
+                  <option>Фармацевтски факултет</option>
+                  <option>Филозофски факултет</option>
+                  <option>Филолошки факултет „Блаже Конески“</option>
+                  <option>Шумарски факултет</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-xs-4 col-md-4">
+              <div class="form-group">
+                <label for="ciklus">Циклус на студии</label>
+                <select class="form-control" name="ciklus" id="ciklus">
+                  <option>прв (додипломски студии)</option>
+                  <option>втор (постдипломски студии)</option>
+                  <option>трет (докторски студии)</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="studiskaPrograma">Студиска програма</label>
+            <input type="text" name="studiskaPrograma" class="form-control" id="studiskaPrograma" aria-describedby="studiskaProgramaHelp" placeholder="Името на твојата студиска програма">
+            <small id="studiskaProgramaHelp" class="form-text text-muted">Студиската програма на која студираш</small>
+          </div>
+
+          <div class="form-group">
+            <label for="modul">Потпрограма/модул</label>
+            <input type="text" name="modul" class="form-control" id="modul" aria-describedby="modulHelp" placeholder="Името на потпрограмата/модулот">
+            <small id="modulHelp" class="form-text text-muted">Потпрограмата (или модулот) на која студираш</small>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-6 col-md-6">
+              <div class="form-group">
+                <label for="ispitenRok">Испитен рок</label>
+                <input type="text" name="ispitenRok" class="form-control" id="ispitenRok" aria-describedby="ispitenRokHelp" placeholder="Внеси го испитниот рок во кој полагаш">
+                <small id="ispitenRokHelp" class="form-text text-muted">Вообичаено, на УКИМ се полага во јануарски, јунски и августовски испитен рок.</small>
+              </div>
+            </div>
+            <div class="col-xs-6 col-md-6">
+              <div class="form-group">
+                <label for="ucebnaGodina">Учебна година</label>
+                <input type="text" name="ucebnaGodina" class="form-control" id="ucebnaGodina" aria-describedby="ucebnaGodinaHelp" placeholder="пр. за 2017/2018, внесете 2017">
+                <small id="ucebnaGodinaHelp" class="form-text text-muted">Учебна година во која се полага предметот</small>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset class="form-group">
+        <legend> Податоци за предметот </legend>
+          <div class="row">
+            <div class="col-xs-6 col-md-6">
+              <div class="form-group">
+                <label for="predmet">Име на предметот кој се полага</label>
+                <input type="text" name="predmet" class="form-control" id="predmet" aria-describedby="predmetHelp" placeholder="пр. Компјутерски Вид">
+                <small id="predmetHelp" class="form-text text-muted">Име на предметот кој се полага</small>
+              </div>
+            </div>
+            <div class="col-xs-3 col-md-3">
+              <div class="form-group">
+                <label for="kodZaPredmet">Код</label>
+                <input type="text" name="kodZaPredmet" class="form-control" id="kodZaPredmet" aria-describedby="kodZaPredmetHelp" placeholder="пр. ФЕИТ05Л023">
+                <small id="kodZaPredmetHelp" class="form-text text-muted">Код на предметот</small>
+              </div>
+            </div>
+            <div class="col-xs-3 col-md-3">
+              <div class="form-group">
+                <label for="kojPatPolaga">По кој пат се полага предметот</label>
+                <input type="text" name="kojPatPolaga" class="form-control" id="kojPatPolaga" aria-describedby="kojPatPolagaHelp" placeholder="пр. последен">
+                <small id="kojPatPolagaHelp" class="form-text text-muted">Првпат, вторпат, третпат...</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-3 col-md-3">
+              <div class="form-group">
+                <label for="semestar">Семестар</label>
+                <input type="text" name="semestar" class="form-control" id="semestar" aria-describedby="semestarHelp" placeholder="пр. VII">
+                <small id="semestarHelp" class="form-text text-muted">Во кој семестар го слушаше предметот?</small>
+              </div>
+            </div>
+
+            <div class="col-xs-5 col-md-5">
+              <div class="form-group">
+                <label for="ucebnaGodinaSlushan">Учебна година кога е ислушан</label>
+                <input type="text" name="ucebnaGodinaSlusan" class="form-control" id="ucebnaGodinaSlushan" aria-describedby="ucebnaGodinaSlushanHelp" placeholder="пр. 2016 (за академска 2016/2017)">
+                <small id="ucebnaGodinaSlushanHelp" class="form-text text-muted">Внесете ја почетната година</small>
+              </div>
+            </div>
+
+            <div class="col-xs-4 col-md-4">
+              <div class="form-group">
+                <label for="krediti">Кредити</label>
+                <input type="text" name="krediti" class="form-control" id="krediti" aria-describedby="kreditiHelp" placeholder="пр. 7,5">
+                <small id="kreditiHelp" class="form-text text-muted">Број на кредити</small>
+              </div>
+            </div>
+          </div>
+
+        <fieldset class="form-group row">
+          <legend class="col-form-legend col-xs-2 col-md-2">Статус на предметот</legend>
+          <div class="col-xs-10 col-md-10">
+            <div class="form-check">
+              <label class="form-check-label"> <input class="form-check-input" type="radio" name="predmetStatus" id="predmetStatus1" value="Задолжителен" checked>
+                Задолжителен
+              </label>
+            </div>
+            <div class="form-check">
+              <label class="form-check-label"> <input class="form-check-input" type="radio" name="predmetStatus" id="predmetStatus2" value="Изборен">
+                Изборен
+              </label>
+            </div>
+            <div class="form-check">
+              <label class="form-check-label"> <input class="form-check-input" type="radio" name="predmetStatus" id="predmetStatus3" value="Изборен од Унив. листа">
+                Изборен од Универзитетската листа на УКИМ
+              </label>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset class="form-group">
+          <legend>Реализатори на програмата</legend>
+          <div class="form-group">
+            <label for="nastavnik">Професор</label>
+            <input type="text" name="nastavnik" class="form-control" id="nastavnik" aria-describedby="nastavnikHelp" placeholder="пр. д-р Марија Календар">
+            <small id="nastavnikHelp" class="form-text text-muted">Името и презимето на професорот кај кого го слушаш предметот</small>
+          </div>
+
+          <div class="form-group">
+            <label for="asistent">Асистент</label>
+            <input type="text" name="asistent" class="form-control" id="asistent" aria-describedby="asistentHelp" placeholder="пр. Горан Јакимовски">
+            <small id="asistentHelp" class="form-text text-muted">Името и презимето на асистентот</small>
+          </div>
+      </fieldset>
+
+      <div class="form-group">
+        <label for="taksenaMarka">Код за таксена марка</label>
+        <input type="text" name="taksenaMarka" class="form-control" id="taksenaMarka" aria-describedby="taksenaMarkaHelp" placeholder="пр. 0000201821402">
+        <small id="taksenaMarkaHelp" class="form-text text-muted">Доколку плаќаш преку уплатница, остави го полето празно. <b>Задолжително внеси го кодот во IKnow!</b></small>
+      </div>
+      </fieldset>
+      </form>
+
+      <div class="form-group row">
+        <div class="offset-xs-10 offset-md-10 col-xs-1 col-md-1">
+          <button type="submit" class="btn btn-primary">Понатаму</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <div class="container">
+      <div class="progress">
+        <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%; height: 2px;"></div>
+      </div>
+    </div>
+  </div>
+  <!-- footer -->
+  <footer class="text-muted">
+
+    <div class="container">
+      <p><a href="www.feit.ukim.edu.mk/">ФЕИТ</a> 2017</p>
+      <p>Идеја и реализација: Андреј Георгиевски и тимот „На проект им се работело“</p>
+    </div>
+  </footer>
+</body>
+</html>

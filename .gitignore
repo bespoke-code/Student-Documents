@@ -49,3 +49,6 @@ Temporary Items
 # Visual Studio / Visual Studio Code files
 .vs/
 packages/
+
+src/img
+src/images
